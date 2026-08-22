@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN python train_model.py
 
 # Render sets its own PORT at runtime, 8501 is only the local default
-ENV PORT=8501
-EXPOSE 8501
+ENV PORT=10000
+EXPOSE 10000
 
 CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.enableXsrfProtection=false
